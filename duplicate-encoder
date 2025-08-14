@@ -1,0 +1,11 @@
+def duplicate_encode(word):
+    word = word.lower()
+    result = []
+    i = 0
+    while i < len(word):
+        if word.count(word[i])>1:
+            result.append(")")
+        else:
+            result.append("(")
+        i += 1
+    return "".join(result)
