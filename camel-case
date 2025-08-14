@@ -1,0 +1,11 @@
+def to_camel_case(text):
+    text = list(text)
+    result = []
+    
+    for index, char in enumerate(text):
+        if char in ("-", "_"):
+            result.append(text[index + 1].upper())
+        elif index == 0 or text[index - 1] not in ("-", "_"):
+            result.append(char)
+    
+    return "".join(result)
