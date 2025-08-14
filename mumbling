@@ -1,0 +1,9 @@
+def accum(st):
+    st = list(st)
+    result = []
+    
+    for index, char in enumerate(st):
+        letter = char.upper() + char.lower() * index
+        result.append(letter)
+        
+    return "-".join(result)
